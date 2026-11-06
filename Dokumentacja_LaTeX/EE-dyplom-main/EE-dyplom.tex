@@ -1,0 +1,95 @@
+% !TEX program = pdflatex
+% !TeX encoding = utf8
+% !TeX spellcheck = pl-PL
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wybierz rodzaj pracy dyplomowej oraz wydział
+% Pick thesis type and faculty
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[thesis=inz,faculty=ee]{EE-dyplom} 
+
+% thesis=[inz|mgr|bsc|msc]
+%  * inz - praca inżynierska
+%  * mgr - praca magisterska
+%  * bsc - bachelor thesis
+%  * msc - master thesis
+
+% Skróty nazw wydziałów zgodne z domenami internetowymi
+% Abbreviations of Faculties according to Internet subdomains
+% faculty=[
+%	arch,
+%	gik,
+%	ee,
+%	wip
+%	]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Konfiguracja - do personalizacji
+% Configuration - to be personalized
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\instytut{Instytut Sterowania i Elektroniki Przemysłowej}
+\kierunek{Automatyka i Robotyka Stosowana}
+\title{Opracowanie oprogramowania sterującego i przeprowadzenie testów obciążnicy pasywnej}
+\engtitle{Development of control software and execution of passive load bank tests}
+\album{331772}
+\author{Szymon Bzura}
+\promotor{prof. dr hab. inż. Arkadiusz Kaszewski}
+\date{2026}
+\longdate{2026-11-06}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Streszczenie pracy i abstract.
+% In case of thesis in English swap the order - English version goes first.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\streszczeniepracy{
+To jest streszczenie. To jest trochę za krótkie, jako że powinno zająć całą stronę.
+
+Streszczenie to nie to samo co wstęp. Streszczenie przedstawia informacje o tym, co się znajduje w tekście poszczególnych rozdziałów danej pracy podczas gdy ,,Wstęp'' służy przedstawieniu zagadnienia podjętego w~pracy. Streszczenie prezentuje aktualny stan pracy dyplomowej, której pisanie zostało zakończone a~więc należy w~nim posługiwać się czasem teraźniejszym.
+
+} % koniec streszczenia
+
+\slowakluczowe{A, B, C}
+
+\thesisabstract{
+This is abstract. This one is a little too short as it should occupy the whole page.
+
+An abstract is not the same as an introduction. The abstract provides information about what is contained in the text of specific chapters of a given work, whereas the introduction serves to present the topic addressed in the work. The abstract presents the current state of the diploma thesis, the writing of which has been completed, and therefore it should be written in the present tense.
+} % end of abstract
+
+\thesiskeywords{X, Y, Z}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tu zaczyna się dokument
+% Here is the beginning of the document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+    % Strony nagłówkowe - musi być
+    % Headers - must exist
+    \frontpages
+    
+    % Tekst pracy - osobne pliki do edycji
+    % Thesis text - separate files for edition
+
+	\input{tekst/wstep}
+	\input{tekst/analiza}
+	\input{tekst/realizacja}
+	\input{tekst/podsumowanie}
+
+    % Bibliografia - musi być, jest w pliku EE-dyplom.bib
+    % Bibliography - must exist, is in the file EE-dyplom.bib
+    \bibliografia
+
+    % Strony końcowe - można zakomentować, jeśli zbędne
+    % Additional pages - comment out if not needed
+    
+    % Wykaz symboli i skrótów - patrz opis w tekście przykładowym
+    \acronymslist
+    % Spis rysunków
+    \listoffigures
+    % Spis tabel
+    \listoftables
+    % Załączniki (plik appendices.tex)
+    \easyappendices
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
