@@ -70,10 +70,15 @@ An abstract is not the same as an introduction. The abstract provides informatio
     % Tekst pracy - osobne pliki do edycji
     % Thesis text - separate files for edition
 
-	\input{tekst/wstep}
-	\input{tekst/analiza}
-	\input{tekst/realizacja}
-	\input{tekst/podsumowanie}
+	% Tekst pracy - modułowy podział na rozdziały
+	\input{tekst/01_wstep}
+	\input{tekst/02_analiza_sprzetu}
+	\input{tekst/03_zalozenia_fsm}
+	\input{tekst/04_firmware_c2000}
+	\input{tekst/05_telemetria_can}
+	\input{tekst/06_automatyzacja_matlab}
+	\input{tekst/07_instrukcja_stanowiskowa}
+	\input{tekst/08_podsumowanie}
 
     % Bibliografia - musi być, jest w pliku EE-dyplom.bib
     % Bibliography - must exist, is in the file EE-dyplom.bib
@@ -89,7 +94,7 @@ An abstract is not the same as an introduction. The abstract provides informatio
     % Spis tabel
     \listoftables
     % Załączniki (plik appendices.tex)
-    \easyappendices
+    %\easyappendices
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
