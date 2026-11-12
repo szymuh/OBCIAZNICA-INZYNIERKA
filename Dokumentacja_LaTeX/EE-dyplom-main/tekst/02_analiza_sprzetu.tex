@@ -35,7 +35,29 @@ Architekturę sprzętową stanowiska zilustrowano na schemacie blokowym (Rysunek
 % Analiza noty katalogowej rodziny C2000 i peryferiów użytych w projekcie (ADC, ePWM, eCAN).
 
 \section{Moduły wykonawcze i styczniki GIGAVAC}
-% Opis układu załączania obciążeń (rezystory 5.5/22/88 omów) i parametrów styczników.
+
+Głównym zadaniem obciążnicy jest bezpieczne wytracanie energii elektrycznej. W tym celu zaprojektowano matrycę rezystorów mocy o modyfikowalnej topologii. Pojedynczy moduł obciążeniowy składa się z sekcji przekaźników (SPDT oraz SPST) i zestawu rezystorów, co pozwala na skokową zmianę rezystancji wypadkowej całego bloku. Logikę przełączania obrazuje schemat ideowy (Rysunek \ref{fig:schematprzekaznikow}).
+
+ \begin{figure}[htb]
+	\centering
+	\includegraphics[width=1\linewidth]{rysunki/schemat_przekaznikow}
+	\caption{Diagram przedstawiający topologię połączenia przekaźników i rezystorów}
+	\label{fig:schematprzekaznikow}
+\end{figure}
+
+
+% Tutaj wstawiasz \begin{figure} z tym schematem przełączników (obraz_7)
+	
+	W celu zapewnienia odpowiedniej wydajności prądowej i termicznej, każdy z widocznych na schemacie pojedynczych bloków rezystancyjnych oznaczonych jako $22R$ jest w rzeczywistości zrealizowany z czterech pojedynczych rezystorów o rezystancji $22\Omega$, połączonych w dwie gałęzie równoległe, w których każda zawiera po dwa rezystory połączone szeregowo.  
+	
+	Taka konfiguracja sprawia, że rezystancja zastępcza całego zestawu rezystorów pozostaje równa wartości pojedynczego elementu ($22\,\Omega$), jednak całkowita zdolność do rozpraszania mocy rośnie czterokrotnie:
+	\begin{equation}
+		R_{z} = \frac{(R + R) \cdot (R + R)}{(R + R) + (R + R)} = R
+	\end{equation}
+	Taki zabieg konstrukcyjny pozwolił na zoptymalizowanie dystrybucji ciepła na powierzchni radiatora przy zachowaniu wymaganych parametrów elektrycznych.
+	
+
+
 
 \section{Układy pomiarowe i sensoryka}
 % Pomiary napięć, prądów, czujniki NTC oraz izolacja galwaniczna układu.
